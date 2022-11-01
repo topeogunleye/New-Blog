@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :likes, foreign_key: 'author_id'
 end
 
-User.create(first_name: 'Tom', last_name: 'Smith', age: '37') # Create
-User.find_by(first_name: 'Tom') # Read
-User.find(1).update(first_name: 'Ann') # Update
-User.find_by(first_name: 'Tom').delete # Delete
+User.create(name: 'Tom', last_name: 'Smith', age: '37') # Create
+User.find_by(name: 'Tom') # Read
+User.find(1).update(name: 'Ann') # Update
+User.find_by(name: 'Ann').delete # Delete
