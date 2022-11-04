@@ -6,10 +6,10 @@ RSpec.describe Comment, type: :model do
     @post = Post.create(author_id: @user.id, title: 'My first post', text: 'A good post')
   end
 
+  # test Post model update_comments_counter method
   it 'update_comments_counter' do
-    expect(@post.comments_counter).to eq(0)
-    Comment.create(author_id: @user.id, post_id: @post.id)
-    @post.update_comments_counter
+    Comment.create(author_id: @user.id, post_id: @post.id, text: 'A good comment')
     expect(@post.comments_counter).to eq(1)
   end
 end
+
