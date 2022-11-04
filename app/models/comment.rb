@@ -6,3 +6,5 @@ class Comment < ApplicationRecord
     Post.increment_counter(:comments_counter, post_id)
   end
 end
+
+LP6YGgWoWMfXDdk7uZgo7ajKoNd71UBU6D
