@@ -1,8 +1,8 @@
-<%= form_with model: @post, url: user_posts_url, class: 'flex flex-col gap-1 items-center mt-24 border-2 p-4' do |f| %>
+<%= form_with model: @post, url: user_posts_url do |form| %>
   <div>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
-    <% article.errors.full_messages_for(:title).each do |message| %>
+    <% post.errors.full_messages_for(:title).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
@@ -10,7 +10,7 @@
   <div>
     <%= form.label :text %><br>
     <%= form.text_area :text %><br>
-    <% article.errors.full_messages_for(:text).each do |message| %>
+    <% post.errors.full_messages_for(:text).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
