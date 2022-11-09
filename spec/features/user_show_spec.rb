@@ -2,7 +2,8 @@ require 'rails_helper'
 
 describe 'show page' do
   before :each do
-    @user_first = User.create(name: 'Temitope', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'This is first user')
+    @user_first = User.create(name: 'Temitope', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                              bio: 'This is first user')
 
     @post_first = @user_first.posts.new(title: 'Self Improvement is the goal', text: 'This is my first post')
     @post_first.likes_counter = 0
